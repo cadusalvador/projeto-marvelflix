@@ -1,0 +1,87 @@
+.destaque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1rem;
+    background-image:linear-gradient($gradient), url($imgpath);
+    height: 800px;
+    background-size: cover;
+
+    .container {
+        margin-left: 50px;
+
+        &__titulo {
+            font-size: 2.5rem;
+            margin-top: 30%;
+        }
+
+        &__sinopse {
+            margin-bottom: 50px;
+            margin-top: 10px;
+            width: 50%;
+        }
+
+        .button {
+            margin-bottom: 20px;
+            &__watch {
+                background-color: $light-grey;
+                border: none;
+                border-radius: 5px;
+                color:$black;
+                padding: 15px 30px;
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-right: 15px;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: $transparency;
+                    transition: ease-in .2s all;
+                }
+    
+                .icon{
+                    margin-right: 10px;
+                }
+            }
+    
+            &__information {
+                background-color: $transparency;
+                border: none;
+                border-radius: 5px;
+                color:$white;
+                padding: 15px 30px;
+                font-size: 1.3rem;
+                font-weight: 700;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                    transition: ease-in .3s all;
+                }
+            }
+        }
+    }
+
+    &__carrosel {
+        margin-top: 10px;
+        display: flex;
+
+        .comics {
+
+            .item {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        .button {
+
+            &__information {
+                margin-top: 10px;
+            }
+        }
+    }
+}

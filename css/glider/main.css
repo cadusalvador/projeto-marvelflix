@@ -1,0 +1,206 @@
+  .glider-persp .glider-slide {
+    margin: 7px 0;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform:  perspective(1500px) rotateY(0deg) scale(1) translateZ(0);
+    transform-origin: 0 0;
+    transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .glider-persp .glider-slide.right-3 {
+    -webkit-transform:  perspective(1500px) rotateY(-50deg) scale(1.35) translateZ(0);
+    -webkit-transform-origin: 100% 50% 0;
+    transform:  perspective(1500px) rotateY(-50deg) scale(1.35) translateZ(0);
+    transform-origin: 0% 50% 0;
+    margin: 10px -8px;
+  }
+  .glider-persp .glider-slide.left-3 {
+    -webkit-transform:  perspective(1500px) rotateY(50deg) scale(1.35) translateZ(0);
+    -webkit-transform-origin: 100% 50% 0;
+    transform:  perspective(1500px) rotateY(50deg) scale(1.35) translateZ(0);
+    transform-origin: 0% 50% 0;
+    margin: 10px 0;
+  }
+  .glider-persp .glider-slide.left-2 {
+    -webkit-transform:  perspective(1500px) rotateY(50deg) scale(1.2) translateZ(0);
+    -webkit-transform-origin: 100% 50% 0;
+    transform:  perspective(1500px) rotateY(50deg) scale(1.2) translateZ(0);
+    transform-origin: 100% 50% 0;
+  }
+  .glider-persp .glider-slide.right-2 {
+    -webkit-transform:  perspective(1500px) rotateY(-50deg) scale(1.2) translateZ(0);
+    -webkit-transform-origin: 0 50% 0;
+    transform:  perspective(1500px) rotateY(-50deg) scale(1.2) translateZ(0);
+    transform-origin: 0 50% 0;
+  }
+  .glider-persp .glider-slide.left-1 {
+    -webkit-transform:  perspective(1200px) rotateY(34deg) scale(1.1) translateZ(0);
+    -webkit-transform-origin: 100% 50% 0;
+    transform:  perspective(1200px) rotateY(34deg) scale(1.1) translateZ(0);
+    transform-origin: 100% 50% 0;
+  }
+  .glider-persp .glider-slide.right-1 {
+    -webkit-transform:  perspective(1200px) rotateY(-34deg) scale(1.1) translateZ(0);
+    -webkit-transform-origin: 0 50% 0;
+    transform:  perspective(1200px) rotateY(-34deg) scale(1.1) translateZ(0);
+    transform-origin: 0 50% 0;
+  }
+  .glider-slide h1 {
+    cursor: pointer;
+  }
+
+  .clickEffect {
+    position:fixed;
+    box-sizing:border-box;
+    border-style:solid;
+    border-color:red;
+    border-radius:50%;
+    animation: clickEffect 0.4s ease-out;
+    z-index:99999;
+    border-image:   linear-gradient(to right,
+  #8cc9f0,
+  #efa8b0,
+  #a89cc8) 5;
+  }
+  @keyframes clickEffect {
+  0%{
+  opacity:1;
+  width:0.5em; height:0.5em;
+  margin:-0.25em;
+  border-width:0.5em;
+  }
+  100%{
+  opacity:0.2;
+  width:15em; height:15em;
+  margin:-7.5em;
+  border-width:0.03em;
+  }
+  }
+  .glider-persp .glider-slide {
+    margin: 10px;
+  }
+  html,body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .glider-persp  {
+    height: 236px;
+  }
+  @media(max-width: 36em){
+    .glider-persp .glider-slide {
+      margin: 3px;
+      min-height: 100px;
+    }
+    .glider-persp {
+      height: 180px;
+    }
+  }
+  #main .demo.persp > h2 {
+    margin-bottom: 0;
+  }
+
+  .glider-persp .glider-track {
+    position: relative;
+    top: 36px;
+  }
+  .glider-persp .gradient-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .glider-persp .gradient-border,
+  .glider-persp .gradient-border-bottom {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+  #header a.button {
+    background: rgba(255,255,255,.89);
+    color: #333 !important;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(200,200,200,.25);
+    box-shadow: 0 0 1px rgba(200,200,200,.25);
+    /*
+    border: 4px solid;
+    border-image: linear-gradient(to right, #8cc9f0, #efa8b0, #a89cc8) 5;
+    border-radius: 0;
+    */
+  }
+
+  #header a.github {
+    position: relative;
+    text-indent: -35px;
+  }
+  .octo {
+    position: absolute;
+    right: 25px;
+    width: 45px;
+    top: 12px
+  }
+  .dl-icon {
+    color:  #8cc9f0 !important;
+    position: relative;
+    top: -1px;
+    left: 4px;
+  }
+  @media(min-width: 1678px){
+    .octo {
+      position: absolute;
+      right: 31px;
+      width: 45px;
+      top: 19px;
+    }
+  }
+  @media(max-width: 1281px){
+    .octo {
+      top: 9px;
+      right: 16px;
+      width: 43px;
+    }
+  }
+  @media(max-width: 738px){
+    #header a.button {
+
+      width: 46%;
+    }
+    #header a.github {
+      text-indent: -20px;
+    }
+    .mobileHide {
+      display: none;
+    }
+    .octo {
+      width: 35px;
+      top: 7px;
+      right: 35px;
+    }
+  }
+  @media(max-width: 450px){
+    .octo {
+      width: 35px;
+      top: 7px;
+      right: 17px;
+    }
+  }
+  span.arguments {
+    color: #333;
+    font-weight: normal;
+    display: inline-block;
+    padding: 0 1px;
+    font-size: .9em;
+}
+
+@-moz-document url-prefix() {
+  .glider-track {
+    margin-bottom: 17px;
+  }
+  .gradient-border {
+    overflow: hidden;
+  }
+  /* doesnt play well with auto hiding */
+  #glider-persp {
+    overflow: hidden;
+  }
+}

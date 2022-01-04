@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/netflix-logo.png">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Glider.js css -->
+    <link rel="stylesheet" href="./css/glider/glider.css">
+
+    <title>MarvelFlix</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container container">
+            <h1 class="container__titulo">MARVELFLIX</h1>
+            <nav class="container__menu menu">
+                <a class="menu__link" href="#">Inicio</a>
+                <a class="menu__link" href="#">Quadrinhos</a>
+                <a class="menu__link" href="#">Filmes</a>
+                <a class="menu__link" href="#">Séries</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="destaque">
+            <div class="destaque__container container">
+                <h2 class="container__titulo">
+                    Sinister War
+                </h2>
+                <p class="container__sinopse">
+                    DOUTOR OCTOPUS ESTA DE VOLTA! E A GUERRA SINISTRA COMEÇOU!
+                    Octopus tem um novo "Seis Sinistros", e se você acha que ele
+                    pensou grande no passado, pense novamente. Octopus NÃO sabe
+                    é que o ABUTRE tem seu próprio sexteto.
+                </p>
+                <div class="container__button button">
+                    <button role="button" class="button__watch">
+                        <i class="fas fa-book-reader icon"></i>
+                        Ler
+                    </button>
+                    <button role="button" class="button__information">
+                        <i class="fas fa-info-circle icon"></i>
+                        Mais informações
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="glider-contain">
+            <div class="destaque__carrosel comics glider" id="carrossel">
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- JS Font Awesome -->
+    <script src="https://kit.fontawesome.com/0563676a7a.js" crossorigin="anonymous"></script>
+
+    <!-- JS Glider Carousel -->
+    <script src="./js/owl/jquery.min.js"></script>
+    <script src="./js/glider/glider.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/ajax.js"></script>
+</body>
+
+</html>
